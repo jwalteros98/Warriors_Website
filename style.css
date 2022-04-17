@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quintessential&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    background: #141414;
+
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    padding: 0 10%;
+    background: black;
+    position: fixed;
+
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 100;
+}
+
+nav .logo{
+    height: 100%;
+}
+
+.logo img{
+    width: 100px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 80px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #fff; /*color de la letra*/
+}
+
+.select{
+  background: #FF1493;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 20px;
+}
+
+
+
+
+/* CLASES DE TEXTO E IMAGEN*/
+.user-box {
+    position: absolute; 
+    top: -120px; left: -0px;
+    right: 12%;
+    z-index: 1;
+}
+
+.user-box::before {
+  content: "";
+  width: 61rem;
+  height: 67rem;
+  position: absolute;
+  top: 0;
+  right: -10;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(20, 20, 20, 1.5));
+  z-index: 100;
+}
+
+
+.user-box img{
+    display: block;
+    padding-top: 0px;
+    width: 1100px;
+    clip-path: inset(0 12% 22.3% 0); /*para recortar la imagen*/
+
+}
+
+.text-box {
+    position: relative;
+    top: 200px; left: 1000px;
+    margin-top: 130px;
+    max-width: 860px; /*tamañoi del box de la letra*/
+    z-index: 200;
+}
+
+.text-box h1{
+    font-size: 60px;
+    font-weight: 1000;
+    letter-spacing: 1.1em;
+    margin-bottom: 20px;
+    color: #fff;
+    
+}
+.text-box h2{
+
+    font-size: 16px;
+    display: inline-block;
+    font-weight: 1000;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 0.2em;
+    
+
+    
+}
+
+.back {
+    position: absolute; 
+    top: 287px; left: 1005px;
+    right: 12%;
+    z-index: 2;
+}
+
+
+
+.back img{
+    display: block;
+    padding-top: 0px;
+    width: 780px;
+    
+}
+
+
+/* SCROLL DOWN*/
+
+.scroll {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    position: relative;
+    margin-top: -16.1rem; /* POSICION ABAJO DEL SCROLL*/
+    margin-left: -61px;
+    animation: down 1.5s infinite;
+    -webkit-animation: down 1.5s infinite;
+  }
+  .scroll::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 18px;
+    width: 18px;
+    height: 18px;
+    border-left: 2px solid #333;
+    border-bottom: 2px solid #333;
+    transform: rotate(-45deg);
+  }
+  
+  @keyframes down {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translateY(15px);
+    }
+    40% {
+      transform: translate(0);
+    }
+  }
+  @-webkit-keyframes down {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translateY(15px);
+    }
+    40% {
+      transform: translate(0);
+    }
+  }
+
+
+
+  /*INDICADOR DE SCROLL*/
+
+  .scroll-indicator {
+    position: fixed;
+    right: 20px;
+    top: 0;
+    bottom: 50px;
+    width: 1px;
+    z-index: -100;
+  }
+  .scroll-indicator:before {
+    content: "";
+    position: fixed;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #fff;
+  }
+  .indicator {
+    top: 0;
+    left: -5px;
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    border-radius: 5px;
+    background: #FF1493;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .indicator span {
+    position: absolute;
+    padding-right: 10px;
+    transform: translate(-100%, 50%);
+  }
+
+
+
+
+  /*ICONS*/
+ 
+.wrapper {
+  display: inline-flex;  /*para que se vea en linea*/
+  margin: 15rem 20.2rem; /*para que se vea en linea*/
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #3b5999;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.btn 
+{
+  color: black;
+  text-decoration: none;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .face book:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+
+/* PAGINA 2*/
+
+.user-box2 {
+  position: absolute; 
+  top: 60rem; left: 3rem;
+  right: 12%;
+  z-index: 1;
+}
+.user-box2::before {
+  content: "";
+  width: 49rem;
+  height: 59rem;
+  position: absolute;
+  top: 0;
+  right: -10;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(20, 20, 20, 1));
+  z-index: 100;
+}
+.user-box2 img{
+  display: block;
+  padding-top: 0px;
+  width: 780px;
+  clip-path: inset(4% 0 4% 0); /*para recortar la imagen*/
+
+}
+
+
+.text-box2 {
+  position: relative;
+  top: -54.5rem; left: 998px;
+  margin-top: 130px;
+  max-width: 860px; /*tamañoi del box de la letra*/
+  z-index: 200;
+}
+
+.text-box2 h1{
+  font-size: 50px;
+  font-weight: 1000;
+  letter-spacing: 1.1em;
+  margin-bottom: 20px;
+  color: #fff;
+  
+}
+
+.text-box2 p{
+  position: relative;
+  font-size: 1.5em;
+  top: 3rem;
+  letter-spacing: 1px;
+  line-height: 2.5;
+  margin-top: 130px;
+  max-width: 750px; /*tamañoi del box de la letra*/
+  z-index: 200;
+  color: #fff;
+}
+
+
+.back2 {
+  position: absolute; 
+  top: 100px; left: 1000px;
+  right: 12%;
+  z-index: 2;
+}
+
+.back2 img{
+  display: block;
+  padding-top: 0px;
+  width: 650px;
+  
+}
+
+  
+/* PAGINA 3*/
+
+.user-box3 {
+  position: absolute; 
+  top: 121rem; left: 66.5rem;
+  right: 12%;
+  z-index: 1;
+}
+
+.user-box3::before {
+  content: "";
+  width: 49rem;
+  height: 57rem;
+  position: absolute;
+  top: 0;
+  right: -10;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(20, 20, 20, 1));
+  z-index: 100;
+}
+
+.user-box3 img{
+  display: block;
+  padding-top: 0px;
+  width: 780px;
+  clip-path: inset(0.5% 0 7% 0); /*para recortar la imagen*/
+
+}
+
+
+.text-box3 {
+  position: relative;
+  top: -56.7rem; left: -55rem;
+  margin-top: 130px;
+  max-width: 860px; /*tamañoi del box de la letra*/
+  z-index: 200;
+}
+
+.text-box3 h1{
+  font-size: 50px;
+  font-weight: 1000;
+  letter-spacing: 1.1em;
+  margin-bottom: 20px;
+  color: #fff;
+  
+}
+
+.text-box3 p{
+  position: relative;
+  font-size: 1.5em;
+  top: 3rem;
+  letter-spacing: 1px;
+  line-height: 2.5;
+  margin-top: 130px;
+  max-width: 750px; /*tamañoi del box de la letra*/
+  z-index: 200;
+  color: #fff;
+}
+
+
+.back3 {
+  position: absolute; 
+  top: 4rem; left: -54.8rem;
+  right: 12%;
+  z-index: 2;
+}
+
+.back3 img{
+  display: block;
+  padding-top: 0px;
+  width: 650px;
+  
+}
+
+
+/* PAGINA 4*/
+
+.user-box4 {
+  position: absolute; 
+  top: 184rem; left: 5rem;
+  right: 12%;
+  z-index: 1;
+
+}
+
+/***********************************************************************************************/
+.user-box4::before {
+  content: "";
+  width: 49rem;
+  height: 57rem;
+  position: absolute;
+  top: 0;
+  right: -10;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(20, 20, 20, 1.5));
+  z-index: 100;
+}
+
+.user-box4 img{
+  display: block;
+  padding-top: 0px;
+  width: 780px;
+  clip-path: inset(0 0 8% 0); /*para recortar la imagen*/
+
+}
+
+
+.text-box4 {
+  position: relative;
+  top: -57.5rem; left: 998px;
+  margin-top: 130px;
+  max-width: 860px; /*tamañoi del box de la letra*/
+  z-index: 200;
+}
+
+.text-box4 h1{
+  font-size: 50px;
+  font-weight: 1000;
+  letter-spacing: 1.1em;
+  margin-bottom: 20px;
+  color: #fff;
+  
+}
+
+.text-box4 p{
+  position: relative;
+  font-size: 1.5em;
+  top: 3rem;
+  letter-spacing: 1px;
+  line-height: 2.5;
+  margin-top: 130px;
+  max-width: 750px; /*tamañoi del box de la letra*/
+  z-index: 200;
+  color: #fff;
+}
+
+
+.back4 {
+  position: absolute; 
+  top: 52px; left: 1000px;
+  right: 12%;
+  z-index: 2;
+}
+
+.back4 img{
+  display: block;
+  padding-top: 0px;
+  width: 650px;
+  
+}
+
+.back5 {
+  position: absolute; 
+  top: 246rem; left: 46rem;
+  right: 12%;
+  z-index: -1;
+}
+
+.back5 img{
+  display: block;
+  padding-top: 0px;
+  width: 400px;
+  
+}
+
+.user-box5 {
+  position: absolute; 
+  top: 242rem; left: 33rem;
+  right: 12%;
+  z-index: -2;
+
+}
+
+
+.user-box5::before {
+  content: "";
+  width: 49rem;
+  height: 38rem;
+  position: absolute;
+  top: 0;
+  right: -10;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(20, 20, 20, 1.5));
+  z-index: 100;
+}
+
+.user-box5 img{
+  display: block;
+  padding-top: 0px;
+  width: 780px;
+  clip-path: inset(0 0 0 0); /*para recortar la imagen*/;
+
+}
+
+
